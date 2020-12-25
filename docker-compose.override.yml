@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  tors:
+    ports:
+      - "80"
+networks:
+  default:
+    external:
+      name: nat

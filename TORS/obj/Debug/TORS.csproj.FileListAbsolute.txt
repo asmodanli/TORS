@@ -1,0 +1,96 @@
+D:\TORS\TORS\bin\TORS.dll.config
+D:\TORS\TORS\bin\TORS.dll
+D:\TORS\TORS\bin\TORS.pdb
+D:\TORS\TORS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TORS\TORS\bin\Microsoft.Web.Infrastructure.dll
+D:\TORS\TORS\bin\System.Web.Helpers.dll
+D:\TORS\TORS\bin\System.Web.Mvc.dll
+D:\TORS\TORS\bin\System.Web.Razor.dll
+D:\TORS\TORS\bin\System.Web.Webpages.Deployment.dll
+D:\TORS\TORS\bin\System.Web.Webpages.dll
+D:\TORS\TORS\bin\System.Web.Webpages.Razor.dll
+D:\TORS\TORS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TORS\TORS\bin\System.Web.Razor.xml
+D:\TORS\TORS\bin\System.Web.Webpages.xml
+D:\TORS\TORS\bin\System.Web.Webpages.Deployment.xml
+D:\TORS\TORS\bin\System.Web.Webpages.Razor.xml
+D:\TORS\TORS\bin\System.Web.Helpers.xml
+D:\TORS\TORS\bin\System.Web.Mvc.xml
+D:\TORS\TORS\obj\Debug\TORS.csprojResolveAssemblyReference.cache
+D:\TORS\TORS\obj\Debug\TORS.csproj.CoreCompileInputs.cache
+D:\TORS\TORS\obj\Debug\TORS.dll
+D:\TORS\TORS\obj\Debug\TORS.pdb
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\TORS.dll.config
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\TORS.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\TORS.pdb
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Helpers.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Mvc.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Razor.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.Razor.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Razor.xml
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.xml
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.Razor.xml
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Helpers.xml
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\System.Web.Mvc.xml
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.csprojAssemblyReference.cache
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.csproj.CoreCompileInputs.cache
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.csproj.CopyComplete
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.pdb
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\Newtonsoft.Json.dll
+C:\Users\KALENDER\Desktop\TORS1\TORS\TORS\bin\Newtonsoft.Json.xml
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\TORS.dll.config
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\TORS.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\TORS.pdb
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\Newtonsoft.Json.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Helpers.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Mvc.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Razor.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.Razor.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\Newtonsoft.Json.xml
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Razor.xml
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.xml
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Webpages.Razor.xml
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Helpers.xml
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\bin\System.Web.Mvc.xml
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.csprojAssemblyReference.cache
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.csproj.CoreCompileInputs.cache
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.csproj.CopyComplete
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.dll
+C:\Users\Eray\Desktop\TORS1\TORS\TORS\obj\Debug\TORS.pdb
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\TORS.dll.config
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\TORS.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\TORS.pdb
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\Newtonsoft.Json.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Helpers.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Mvc.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Razor.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Webpages.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Webpages.Razor.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\Newtonsoft.Json.xml
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Razor.xml
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Webpages.xml
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Webpages.Razor.xml
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Helpers.xml
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\bin\System.Web.Mvc.xml
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\obj\Debug\TORS.csprojResolveAssemblyReference.cache
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\obj\Debug\TORS.csproj.CoreCompileInputs.cache
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\obj\Debug\TORS.dll
+C:\Users\Sena Modanlı\Desktop\TORS1_5\TORS1\TORS\TORS\obj\Debug\TORS.pdb
