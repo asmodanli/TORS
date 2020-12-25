@@ -1,0 +1,97 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+    <link href='https://fullcalendar.io/assets/demo-topbar.css' rel='stylesheet' />
+    <link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css' rel='stylesheet' />
+    <link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/moment.min.js'></script>
+    <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/jquery.min.js'></script>
+    <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.js'></script>
+
+
+    <script>
+
+        $(function () {
+            $('#calendar').fullCalendar({
+                defaultView: 'listDay',
+
+                // customize the button names,
+                // otherwise they'd all just say "list"
+                views: {
+                    listDay: { buttonText: 'Bugün' },
+                    listWeek: { buttonText: 'Hafta' },
+                    listMonth: { buttonText: 'Ay' }
+                },
+
+                header: {
+                    left: 'sayfam',
+                    center: '',
+                    right: 'listDay,listWeek,listMonth'
+                },
+                events: 'https://fullcalendar.io/demo-events.json'
+            })
+        });
+
+    </script>
+</head>
+<body>
+
+    <div class="page-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <div class="col-md-3">
+                    <img src="http://i.hizliresim.com/7D61Vl.png" height="120" width="150">
+                </div>
+
+                <div class="col-md-7">
+                    <h1 style="color:white; font-size:2rem;"><b>Toplantı Odası Rezervasyon Sistemi</b></h1>
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link text-white" href="http://localhost:63883/AnaSayfa/AnaSayfa"> Anasayfa <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://localhost:63883/Rezervasyon/Rezervasyon2"> Rezervasyon </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://localhost:63883/ToplantiTarih/ToplantiTarih">Toplantı Tarihleri</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://www.google.com.tr">Çıkış</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <img src="http://i.hizliresim.com/X6PlA7.png" height="120" width="150">
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+    <div id='calendar'></div>
+
+    </div>
+
+    <br />  <br />
+</body>
+</html>

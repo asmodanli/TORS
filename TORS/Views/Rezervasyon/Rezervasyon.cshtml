@@ -1,0 +1,498 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+    <title>Toplantı Odası Rezervasyon Sistemi </title>
+</head>
+<body>
+
+    <style>
+
+        .bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white
+        }
+
+            .bootstrap-iso form button, .bootstrap-iso form button:hover {
+                color: white !important;
+            }
+
+        .asteriskField {
+            color: red;
+        }
+    </style>
+
+    <!--formden.js communicates with FormDen server to validate fields and submit via AJAX -->
+    <script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+
+    <!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+
+    <div class="container">
+        <br />
+        <div class="page-header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+                <div class="col-md-3">
+                    <img src="http://i.hizliresim.com/ED32MB.png" height="120" width="150">
+                </div>
+                <div class="col-md-9">
+                    <h1 style="color:white; font-size:2rem;"><b>Toplantı Odası Rezervasyon Sistemi</b></h1>
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link text-white" href="http://localhost:63883/AnaSayfa/AnaSayfa"> Anasayfa <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://localhost:63883/Rezervasyon/Rezervasyon"> Rezervasyon </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://localhost:63883/ToplantiTarih/ToplantiTarih">Toplantı Tarihleri</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="http://localhost:63883/login/login">Çıkış</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </nav>
+        </div>
+    </div>
+
+    <br />  <br />
+
+
+    <div class="container">
+
+
+        <form>
+
+            <div class="form-group">
+                <b>   <label for="T_Salon">Toplantı salonunu seçiniz:</label></b>
+                <select id="T_Salon" class="form-control">
+                    <option> Salon seçiniz</option>
+                    @foreach (var oda in ViewBag.Odalar)
+                    {
+                        <option> @oda.oda_adi</option>
+                    }
+                </select>
+
+                <div id="er1"></div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col">
+                    <div class="bootstrap-iso">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div>
+                                    <div>
+                                        <b>
+                                            <label for="date" style="font-size:1rem;">
+                                                Tarih:
+
+                                            </label>
+
+                                        </b>
+                                        <div>
+                                            <div>
+
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar">
+                                                        </i>
+                                                    </div>
+                                                    <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text" />
+                                                </div>
+                                                <div id="er2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 col">
+                    <div class="checkbox">
+                        <br />
+                        <b>   <label><input type="checkbox" id="Tm_Gun" value=""> Tüm gün seçiniz</label></b>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" id="saatler">
+                <div class=" form-group col-md-6 col ">
+                    <b>    <label for="Bg_Saat">Başlangıç saatini seçiniz:</label></b>
+                    <select id="Bg_Saat" class="form-control">
+                        <option> Saat seçiniz</option>
+                        <option>08:00</option>
+                        <option>08:30</option>
+                        <option>09:00</option>
+                        <option>09:30</option>
+                        <option>10:00</option>
+                        <option>10:30</option>
+                        <option>11:00</option>
+                        <option>11:30</option>
+                        <option>13:00</option>
+                        <option>13:30</option>
+                        <option>14:00</option>
+                        <option>14:30</option>
+                        <option>15:00</option>
+                        <option>15:30</option>
+                        <option>16:00</option>
+                        <option>16:30</option>
+                    </select>
+                    <div id="er3"></div>
+
+                </div>
+                <div class=" form-group col col-md-6 ">
+                    <b>  <label for="Bt_Saat">Bitiş saatini seçiniz:</label></b>
+                    <select id="Bt_Saat" class="form-control">
+                        <option>Saat seçiniz</option>
+                        <option>08:30</option>
+                        <option>09:00</option>
+                        <option>09:30</option>
+                        <option>10:00</option>
+                        <option>10:30</option>
+                        <option>11:00</option>
+                        <option>11:30</option>
+                        <option>13:00</option>
+                        <option>13:30</option>
+                        <option>14:00</option>
+                        <option>14:30</option>
+                        <option>15:00</option>
+                        <option>15:30</option>
+                        <option>16:00</option>
+                        <option>16:30</option>
+                        <option>17:00</option>
+                    </select>
+                    <div id="er4"></div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <b>  <label for="T_Konu">Toplantı hakkında bilgi veriniz:</label></b>
+                <textarea rows="3" class="form-control" id="T_Konu"></textarea>
+                <div id="er5"></div>
+            </div>
+            <div class="row">
+                <div class=" form-group col-md-6 col ">
+
+                    <b> <label for="K_Sayi">Kişi sayısını giriniz:</label></b>
+
+                    <select id="K_Sayi" class="form-control">
+                        <option>Kişi sayısı seçiniz</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                    </select>
+                    <div id="er6"></div>
+                </div>
+
+                <div class="form-group col-md-6 col">
+                    <b>   <label for="Mudurluk">Müdürlüğünüzü seçiniz:</label></b>
+                    <select id="Mudurluk" class="form-control">
+                        <option>Müdürlük seçiniz</option>
+                        <option>Coğrafi Bilgi Sistemleri Müdürlüğü</option>
+                        <option>Elektronik Sistemler Müdürlüğü</option>
+                        <option>Akıllı Şehir Sistemleri Müdürlüğü</option>
+                    </select>
+                    <div id="er7"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <b>  <label for="T_Sahip">Toplantı sahibi:</label></b>
+                <textarea rows="2" class="form-control" id="T_Sahip"></textarea>
+                <div id="er8"></div>
+            </div>
+            <div class="form-group">
+                <b>  <label for="Irtibat">İrtibat bilgilerini giriniz:</label></b>
+                <textarea rows="3" class="form-control" id="Irtibat"></textarea>
+                <div id="er9"></div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <b>  <label for="T_kisi">Kişi ekleyiniz</label> </b>
+
+            </div>
+
+            <div class="pull-right">
+                <button type="button" id="kayit" class="btn btn-danger btn-lg">Kayıt</button>
+                <script type="text/javascript">
+
+
+
+                    $(document).ready(function () {
+
+                        $("#Tm_Gun").change(function () {
+                            if (this.checked) {
+
+                                $("#saatler").css("display", "none");
+
+                            }
+                            else {
+                                $("#saatler").css("display", "block");
+
+
+
+                            }
+                        });
+
+
+                        $("#kayit").click(function (data) {
+
+                            debugger;
+                            if (document.getElementById("T_Salon").value == "Salon seçiniz") {
+
+                                document.getElementById("er1").innerHTML = "Lütfen salonu seçiniz!";
+                                document.getElementById("er1").style.color = "red";
+                                document.getElementById("er1").style.display = "block";
+
+                                $('html,body').scrollTop(0);
+
+
+                            }
+                            else if (document.getElementById("date").value == "") {
+                                document.getElementById("er1").innerHTML = "  ";
+
+                                document.getElementById("er2").innerHTML = "Lütfen tarihi seçiniz!";
+                                document.getElementById("er2").style.color = "red";
+                                document.getElementById("er2").style.display = "block";
+                                $('html,body').scrollTop(200);
+                            }
+                            //else if (document.getElementById("Bg_Saat").value == "Saat seçiniz") {
+                            //    document.getElementById("er1").innerHTML = "  ";
+                            //    document.getElementById("er2").innerHTML = "  ";
+
+                            //    document.getElementById("er3").innerHTML = "Lütfen saati seçiniz!";
+                            //    document.getElementById("er3").style.color = "red";
+                            //    document.getElementById("er3").style.display = "block";
+                            //}
+                            //else if (document.getElementById("Bt_Saat").value == "Saat seçiniz") {
+                            //    document.getElementById("er1").innerHTML = "  ";
+                            //    document.getElementById("er2").innerHTML = "  ";
+                            //    document.getElementById("er3").innerHTML = "  ";
+
+                            //    document.getElementById("er4").innerHTML = "Lütfen saati seçiniz!";
+                            //    document.getElementById("er4").style.color = "red";
+                            //    document.getElementById("er4").style.display = "block";
+                            //}
+                            else if (document.getElementById("T_Konu").value == "") {
+                                document.getElementById("er1").innerHTML = "  ";
+                                document.getElementById("er2").innerHTML = "  ";
+                                document.getElementById("er3").innerHTML = "  ";
+                                document.getElementById("er4").innerHTML = "  ";
+                                $('html,body').scrollTop(300);
+
+                                document.getElementById("er5").innerHTML = "Lütfen konu giriniz!";
+                                document.getElementById("er5").style.color = "red";
+                                document.getElementById("er5").style.display = "block";
+                            }
+                            else if (document.getElementById("K_Sayi").value == "Kişi sayısı seçiniz") {
+                                document.getElementById("er1").innerHTML = "  ";
+                                document.getElementById("er2").innerHTML = "  ";
+                                document.getElementById("er3").innerHTML = "  ";
+                                document.getElementById("er4").innerHTML = "  ";
+                                document.getElementById("er5").innerHTML = "  ";
+
+                                document.getElementById("er6").innerHTML = "Lütfen kişi sayısını seçiniz!";
+                                document.getElementById("er6").style.color = "red";
+                                document.getElementById("er6").style.display = "block";
+                            }
+                            else if (document.getElementById("Mudurluk").value == "Müdürlük seçiniz") {
+                                document.getElementById("er1").innerHTML = "  ";
+                                document.getElementById("er2").innerHTML = "  ";
+                                document.getElementById("er3").innerHTML = "  ";
+                                document.getElementById("er4").innerHTML = "  ";
+                                document.getElementById("er5").innerHTML = "  ";
+                                document.getElementById("er6").innerHTML = "  ";
+
+                                document.getElementById("er7").innerHTML = "Lütfen müdürlüğünüzü seçiniz!";
+                                document.getElementById("er7").style.color = "red";
+                                document.getElementById("er7").style.display = "block";
+                            }
+                            else if (document.getElementById("T_Sahip").value == "") {
+                                document.getElementById("er1").innerHTML = "  ";
+                                document.getElementById("er2").innerHTML = "  ";
+                                document.getElementById("er3").innerHTML = "  ";
+                                document.getElementById("er4").innerHTML = "  ";
+                                document.getElementById("er5").innerHTML = "  ";
+                                document.getElementById("er6").innerHTML = "  ";
+                                document.getElementById("er7").innerHTML = "  ";
+
+                                document.getElementById("er8").innerHTML = "Lütfen boş bırakmayınız!";
+                                document.getElementById("er8").style.color = "red";
+                                document.getElementById("er8").style.display = "block";
+                            }
+                            else if (document.getElementById("Irtibat").value == "") {
+                                document.getElementById("er1").innerHTML = "  ";
+                                document.getElementById("er2").innerHTML = "  ";
+                                document.getElementById("er3").innerHTML = "  ";
+                                document.getElementById("er4").innerHTML = "  ";
+                                document.getElementById("er5").innerHTML = "  ";
+                                document.getElementById("er6").innerHTML = "  ";
+                                document.getElementById("er7").innerHTML = "  ";
+                                document.getElementById("er8").innerHTML = "  ";
+
+                                document.getElementById("er9").innerHTML = "Lütfen boş bırakmayınız!";
+                                document.getElementById("er9").style.color = "red";
+                                document.getElementById("er9").style.display = "block";
+                            }
+
+                            else {
+                                alert("kaydoldun");
+                                document.getElementById("er1").innerHTML = "  ";
+                                document.getElementById("er2").innerHTML = "  ";
+                                document.getElementById("er3").innerHTML = "  ";
+                                document.getElementById("er4").innerHTML = "  ";
+                                document.getElementById("er5").innerHTML = "  ";
+                                document.getElementById("er6").innerHTML = "  ";
+                                document.getElementById("er7").innerHTML = "  ";
+                                document.getElementById("er8").innerHTML = "  ";
+                                document.getElementById("er9").innerHTML = "  ";
+
+
+                                var salonAdi = $("#T_Salon").val();
+                                var gun = $("#date").val();
+                                var tum_gun = $("#Tm_Gun").val();
+
+                                var konu = $("#T_Konu").val();
+                                var kisisayisi = $("#K_Sayi").val();
+                                var mudurluk = $("#Mudurluk").val();
+                                var t_sahip = $("#T_Sahip").val();
+                                var irtibat = $("#Irtibat").val();
+                                //var  = $("#T_Konu").val();
+                                var bg_saat = ($("#saatler").css("display") == "none" ? "08:30" : $("#Bg_Saat").val());
+                                var bt_saat = ($("#saatler").css("display") == "none" ? "17:00" : $("#Bt_Saat").val());
+                                //console.info(salon, gun, tam_gun, bg_saat, bt_saat, konu, kisisayisi, mudurluk, irtibat);
+
+
+                                $("#T_Salon ").html(data.salon);
+                                $("#date ").html(data.gun);
+                                $("#Tm_Gun").html(data.tum_gun);
+                                $("#Bg_Saat ").html(data.baslama_saat);
+                                $("#Bt_Saat ").html(data.bitis_saat);
+                                $("#T_Konu ").html(data.konu);
+                                $("#K_Sayi ").html(data.kisisayisi);
+                                $("#Mudurluk ").html(data.mudurluk);
+                                $("#T_Sahip ").html(data.t_sahip);
+                                $("#T_Irtibat ").html(data.irtibat);
+
+                                var rezervasyonModel = {
+
+                                    "ad_id": 1,
+                                    "T_salon": salonAdi,
+                                    "K_Sayi": kisisayisi,
+                                    "Mudurluk": mudurluk,
+                                    "T_Sahip": t_sahip,
+                                    "T_Irtibat": irtibat,
+                                    "Bg_Saat": bg_saat,
+                                    "Bt_Saat": bt_saat,
+                                    //"tum_gun": tum_gun,
+                                    "date": gun,
+                                    "T_Konu": konu
+
+
+                                };
+                                console.info(rezervasyonModel);
+                                $.ajax({
+                                    url: "/Rezervasyon/RezEkle",
+
+                                    data: rezervasyonModel,
+                                    //  url: "\TORS\TORS\TORS\Controllers" + this.id,
+                                    type: "POST",
+
+                                    dataType: "json",
+                                    success: function (data) {
+
+                                        console.info("Ekleme işlemi ", data);
+
+
+
+
+                                    }
+                                });
+                            }
+                        });
+                    });
+
+
+
+                </script>
+                @*<button type="button"id="kayit" onClick="Refresh()">Close</button>
+
+                    <script>
+                        function Refresh() {
+                            window.parent.location = window.parent.location.href;
+                        }
+                    </script>*@
+                <br /><br />
+            </div>
+
+        </form>
+
+
+    </div>
+
+
+    <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+    <!-- Include jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+
+    </script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+
+    <script>
+
+        $(document).ready(function () {
+            var date_input = $('input[name="date"]'); //our date input has the name "date"
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+
+
+            date_input.datepicker({
+                format: 'dd/mm/yyyy',
+                container: container,
+                weekStart: 1,
+                todayHighlight: true,
+                autoclose: true,
+            })
+        })
+    </script>
+
+</body>
+</html>
